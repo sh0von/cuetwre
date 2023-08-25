@@ -43,11 +43,7 @@ function App() {
         <Container>
           {" "}
           <Helmet>
-            <title>CUET WRE Materials</title>
-            <meta
-              name="description"
-              content="Created by the Department of Water Resources Engineering at CUET."
-            />
+            
           </Helmet>
           <h1 className="text-center mb-4">CUET WRE</h1>
           <h3 className="text-center mb-4">Water Resources Engineering</h3>
