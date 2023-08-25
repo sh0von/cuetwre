@@ -1,0 +1,23 @@
+/* Water wave animation */
+@keyframes waveAnimation {
+    0% {
+      transform: translateX(0) translateY(10px);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0) translateY(10px);
+    }
+  }
+  
+  /* Apply wave animation to water-wave SVG */
+  .water-wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: waveAnimation 10s infinite;
+  }
+  
