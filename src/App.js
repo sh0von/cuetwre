@@ -33,11 +33,13 @@ function App() {
       <div class="particle"></div>
       <div class="particle"></div>
     </div>  
-      <div className="background-image d-flex align-items-center justify-content-center min-vh-100 p-4">
+      <div className="background-image d-flex align-items-center justify-content-center min-vh-100">
 
-      <Container>  <h1 className="text-center mb-4">CUET WRE</h1> <h3 className="text-center mb-4">Water Resources Engineering</h3> {/* Add the heading */}
+      <Container> 
+         <h1 className="text-center mb-4">CUET WRE</h1> 
+         <h3 className="text-center mb-4">Water Resources Engineering</h3>
         
-        <Row className="d-flex flex-column min-vh-100 p-4">
+        <Row className="d-flex flex-column  ">
           <Col>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -47,8 +49,10 @@ function App() {
             </Routes>
           </Col>
         </Row>
-      </Container>
-      </div>
+      </Container>  
+      </div>      <footer className="mt-auto text-center py-3">
+          <p>&copy; 2023 CUET WRE Students. All rights reserved.</p>
+        </footer>
     </Router>
   );
 }
@@ -111,8 +115,6 @@ function Level() {
   );
 }
 
-// Similar updates for the remaining components (Term, Subject)
-// ... (import statements and App component)
 
 function Term() {
   const { levelIndex, termIndex } = useParams();
@@ -135,7 +137,9 @@ function Term() {
         {term.subjects.map((subject, subjectIndex) => (
           <Col key={subjectIndex} md={6} className="mb-4">
             <div className="border ccontainer rounded p-4">
-              <h4>{subject.title}</h4>
+              <h4>{subject.title}</h4><p> {subject.books.length} Materials</p> 
+              {/* Display number of books */}
+
               <Link to={`/level/${levelIndex}/term/${termIndex}/subject/${subjectIndex}`}>
                 <Button variant="primary" className="mt-2">
                   Explore
@@ -148,7 +152,6 @@ function Term() {
     </Container>
   );
 }
-// ... (import statements and App component)
 
 function Subject() {
   const { levelIndex, termIndex, subjectIndex } = useParams();
