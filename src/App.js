@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 import { Container, Breadcrumb, Button, Row, Col } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import FeedbackComponent from "./FeedbackComponent";
 function App() {
   return (
     <Router>
