@@ -2,7 +2,7 @@
 .ccontainer {
   border: 1px solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px; /* Adjust the padding as needed */
+  padding: 20px; 
 }body {
   background: #ecf3f3;
 }
@@ -430,7 +430,7 @@
   transform: translate3d(56vw, 64vh, 84px);
   background: #d92647;
 }
-/* PDFModal.css (Create a new CSS file if needed) */
+
 
 
 .close-button {

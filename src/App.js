@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "./App.css";
+
 import data from "./data.json";
 import {
   BrowserRouter as Router,
@@ -10,9 +11,33 @@ import {
 } from "react-router-dom";
 import { Container, Breadcrumb, Button, Row, Col } from "react-bootstrap";
 import { Helmet } from "react-helmet";
+
+import PasswordForm from "./PasswordForm"; // Import the PasswordForm component
+
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Check if the session token exists and is still valid (not expired)
+    const sessionToken = localStorage.getItem("sessionToken");
+    if (sessionToken) {
+      const currentTime = new Date().getTime();
+      if (currentTime < parseInt(sessionToken)) {
+        setAuthenticated(true);
+      } else {
+        // Session has expired, remove the session token
+        localStorage.removeItem("sessionToken");
+      }
+    }
+  }, []);
+
+  const handlePasswordSubmit = (isAuthenticated) => {
+    setAuthenticated(isAuthenticated);
+  };
   return (
     <Router>
+      {authenticated ? ( // Only render the app content if authenticated
+        <div>
       <div id="particle-container">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -47,7 +72,7 @@ function App() {
           </Helmet>
           <h1 className="text-center mb-4">CUET WRE</h1>
           <h3 className="text-center mb-4">Water Resources Engineering</h3>
-          <Row className="d-flex flex-column  ">
+         <Row className="d-flex flex-column  ">
             <Col>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -66,9 +91,15 @@ function App() {
         </Container>
       </div>{" "}
       <footer className="mt-auto text-center py-3">
-        <nav></nav> {/*<FeedbackComponent />*/}
+        <nav></nav> 
         <p>&copy; 2023 CUET WRE Students. All rights reserved.</p>
       </footer>
+      </div>
+      ) : (
+        <div className="password-page">
+          <PasswordForm onPasswordSubmit={handlePasswordSubmit} />
+        </div>
+      )}
     </Router>
   );
 }
@@ -156,7 +187,7 @@ function Term() {
             <div className="border ccontainer rounded p-4">
               <h4>{subject.title}</h4>
               <p> {subject.books.length} Materials</p>
-              {/* Display number of books */}
+              {}
 
               <Link
                 to={`/level/${levelIndex}/term/${termIndex}/subject/${subjectIndex}`}
