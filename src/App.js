@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import "./App.css";
-
+import Cookies from "js-cookie";
 import data from "./data.json";
 import {
   BrowserRouter as Router,
@@ -13,27 +13,34 @@ import { Container, Breadcrumb, Button, Row, Col } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 
 import PasswordForm from "./PasswordForm"; // Import the PasswordForm component
-
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check if the session token exists and is still valid (not expired)
     const sessionToken = localStorage.getItem("sessionToken");
-    if (sessionToken) {
+    const cookieSessionToken = Cookies.get("sessionToken");
+
+    if (sessionToken && cookieSessionToken && sessionToken === cookieSessionToken) {
       const currentTime = new Date().getTime();
       if (currentTime < parseInt(sessionToken)) {
         setAuthenticated(true);
       } else {
-        // Session has expired, remove the session token
         localStorage.removeItem("sessionToken");
+        Cookies.remove("sessionToken");
+        setAuthenticated(false);
       }
+    } else {
+      // If the session token in local storage and cookie don't match, logout
+      localStorage.removeItem("sessionToken");
+      Cookies.remove("sessionToken");
+      setAuthenticated(false);
     }
   }, []);
 
   const handlePasswordSubmit = (isAuthenticated) => {
     setAuthenticated(isAuthenticated);
   };
+
   return (
     <Router>
       {authenticated ? ( // Only render the app content if authenticated
@@ -70,7 +77,7 @@ function App() {
           <Helmet>
             
           </Helmet>
-          <h1 className="text-center mb-4">CUET WRE</h1>
+          <h1 className="text-center heading mb-4">CUET WRE</h1>
           <h3 className="text-center mb-4">Water Resources Engineering</h3>
          <Row className="d-flex flex-column  ">
             <Col>
@@ -104,6 +111,7 @@ function App() {
   );
 }
 
+
 function Home() {
   return (
     <Container>
@@ -117,7 +125,7 @@ function Home() {
           <Col key={levelIndex} md={6} className="mb-4">
             <div className="border ccontainer rounded p-4">
               <h4>{level.name}</h4>
-              <Link to={`/level/${levelIndex}`}>
+              <Link to={`/level/${levelIndex + 1}`}>
                 <Button variant="primary" className="bg-primary border-0">
                   Explore
                 </Button>
@@ -132,7 +140,7 @@ function Home() {
 
 function Level() {
   const { levelIndex } = useParams();
-  const level = data.levels[levelIndex];
+  const level = data.levels[levelIndex - 1]; // Adjusted levelIndex
 
   return (
     <Container>
@@ -149,7 +157,7 @@ function Level() {
           <Col key={termIndex} md={6} className="mb-4">
             <div className="border ccontainer rounded p-4">
               <h4>{term.name}</h4>
-              <Link to={`/level/${levelIndex}/term/${termIndex}`}>
+              <Link to={`/level/${levelIndex}/term/${termIndex + 1}`}>
                 <Button variant="primary" className="mt-2">
                   Explore
                 </Button>
@@ -164,7 +172,7 @@ function Level() {
 
 function Term() {
   const { levelIndex, termIndex } = useParams();
-  const term = data.levels[levelIndex].terms[termIndex];
+  const term = data.levels[levelIndex - 1].terms[termIndex - 1]; // Adjusted termIndex
 
   return (
     <Container>
@@ -173,9 +181,7 @@ function Term() {
           <Link to="/">Home</Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
-          <Link to={`/level/${levelIndex}`}>
-            {data.levels[levelIndex].name}
-          </Link>
+          <Link to={`/level/${levelIndex}`}>{data.levels[levelIndex - 1].name}</Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           <Link to={`/level/${levelIndex}/term/${termIndex}`}>{term.name}</Link>
@@ -186,11 +192,9 @@ function Term() {
           <Col key={subjectIndex} md={6} className="mb-4">
             <div className="border ccontainer rounded p-4">
               <h4>{subject.title}</h4>
-              <p> {subject.books.length} Materials</p>
-              {}
-
+              <p>{subject.books.length} Materials</p>
               <Link
-                to={`/level/${levelIndex}/term/${termIndex}/subject/${subjectIndex}`}
+                to={`/level/${levelIndex}/term/${termIndex}/subject/${subjectIndex + 1}`}
               >
                 <Button variant="primary" className="mt-2">
                   Explore
@@ -207,7 +211,7 @@ function Term() {
 function Subject() {
   const { levelIndex, termIndex, subjectIndex } = useParams();
   const subject =
-    data.levels[levelIndex].terms[termIndex].subjects[subjectIndex];
+    data.levels[levelIndex - 1].terms[termIndex - 1].subjects[subjectIndex - 1]; // Adjusted subjectIndex
 
   return (
     <Container>
@@ -217,12 +221,12 @@ function Subject() {
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           <Link to={`/level/${levelIndex}`}>
-            {data.levels[levelIndex].name}
+            {data.levels[levelIndex - 1].name}
           </Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           <Link to={`/level/${levelIndex}/term/${termIndex}`}>
-            {data.levels[levelIndex].terms[termIndex].name}
+            {data.levels[levelIndex - 1].terms[termIndex - 1].name}
           </Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item active>{subject.title}</Breadcrumb.Item>
