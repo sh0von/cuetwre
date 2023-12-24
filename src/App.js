@@ -236,13 +236,10 @@ function Subject() {
           <Col key={bookIndex} md={6} className="mb-4">
             <div className="border ccontainer rounded p-4">
               <h4>
-                <a href={book.link} target="_blank" rel="noopener noreferrer">
+                <a href={book.link} target="_blank" className="link" rel="noopener noreferrer">
                   {book.name}
                 </a>
               </h4>
-              <a href={book.link} target="_blank" rel="noopener noreferrer">
-                View
-              </a>
             </div>
           </Col>
         ))}

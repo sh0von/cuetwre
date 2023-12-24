@@ -7,62 +7,9 @@
           "name": "Term 1",
           "subjects": [
             {
-              "title": "Subject A",
+              "title": "Analytical Mechanics",
               "books": [
-                {
-                  "name": "Book 1A",
-                  "link": "https://drive.google.com/file/d/1ZWBk7LPc9ZMG_-Oh-2EssIs2hwGX26I9/view?usp=sharing"
-                },
-                {
-                  "name": "Book 2A",
-                  "link": "https://example.com/book-2a"
-                }
-              ]
-            },
-            {
-              "title": "Subject B",
-              "books": [
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                }
-              ]
-            },
-            {
-              "title": "My test",
-              "books": [
-                {
-                  "name": "Hi",
-                  "link": "s"
-                }
+                {}
               ]
             }
           ]
@@ -71,22 +18,45 @@
           "name": "Term 2",
           "subjects": [
             {
-              "title": "Subject C",
+              "title": "Surveying",
               "books": [
                 {
-                  "name": "Book 1C",
-                  "link": "https://example.com/book-1c"
-                }
-              ]
+                  "name":"Area & Volume - Priya maam",
+                  "link":"https://drive.google.com/file/d/1TwakIrscMgZbaQUc0LLKxNPi4JNKTC9L/view?usp=drive_link"
+                },
+                {
+                  "name":"Curve Surveying - Priya maam",
+                  "link":"https://drive.google.com/file/d/1IDwJAs2MzS0YE4pQ1sVoxJ9NjTLEb7ZP/view?usp=drive_link"
+                
+                },
+                {
+                  "name":"Hydrographic Surveying - Priya maam",
+                  "link":"https://drive.google.com/file/d/1D--bHGnHkoAgMVQCFDSrohm4t5b06mMM/view?usp=drive_link"
+                },{
+                "name":"GPS - Priya maam",
+                "link":"https://drive.google.com/file/d/1QAByOiNzPBNi0Wz1XCpUerLD9U2VHT3O/view?usp=drive_link"
             },
             {
-              "title": "dd",
-              "books": [
-                {
-                  "name": "e",
-                  "link": "ee"
-                }
-              ]
+              "name":"Modern Surveying Eqp- Priya maam",
+              "link":"https://drive.google.com/file/d/11hOJFXYvqXeo7WrU3WWyISxShGPIWi3d/view?usp=drive_link"
+            },
+            {
+              "name":"Introduction to Surveying - Ashraf Sir",
+              "link":"https://drive.google.com/file/d/1BlYsgGEAjPzc0CQm3DdVse5-PU9pCpTS/view?usp=drive_link"
+            },
+            {
+              "name":"Levelling p1 - Ashraf Sir",
+              "link":"https://drive.google.com/file/d/1iFGPDV-OzjiJwc9Ftgb4cKEjp9KfLS5z/view?usp=drive_link"
+            },
+            {
+              "name":"Levelling p2 - Ashraf Sir",
+              "link":"https://drive.google.com/file/d/1w5fbR2d1Jtj7b11INmC8gsIZ6h_Gz0V1/view?usp=drive_link"
+            },
+            {
+              "name":"Traverse Surveying - Ashraf Sir",
+              "link":"https://drive.google.com/file/d/1nbAdFsWmdu6AaUPLk2UnnHfcG585DUmN/view?usp=sharing"
+            }
+          ]
             }
           ]
         }
@@ -99,11 +69,117 @@
           "name": "Term 1",
           "subjects": [
             {
-              "title": "Subject D",
+              "title": "Geology and Geomorphology",
               "books": [
                 {
-                  "name": "Book 1D",
-                  "link": "https://example.com/book-1d"
+                  "name": "Geomorphology - Mukdiul Sir",
+                  "link": "https://drive.google.com/file/d/1acOd4wMBNEx8r_8Qza569u28jcEwv311/view?usp=sharing"
+                },
+                {
+
+                "name":"Geology -Priya Maam",
+                "link":"https://drive.google.com/file/d/1knOoED_oOPSdfz33eyb9Sw68w17LP1aq/view?usp=sharing"
+              }
+
+              ]
+            },
+            {
+              "title": "Solid Mecahnics - 1",
+              "books": [
+                {
+                  "name": "SFD & BEAM - 1801001",
+                  "link": "https://drive.google.com/file/d/1JOQQgutpszKc7nzSfsgW4-UjKh9PyN4b/view?usp=drive_link"
+                },
+                {
+                  "name":"Strain Energy - 1801001",
+                  "link": "https://drive.google.com/file/d/1pNY1ltRhJgaRhwFJ_82VOySzlYDx4x30/view?usp=drive_link"
+                },
+                {
+                  "name": "Stress & Strain - 1801001",
+                  "link":"https://drive.google.com/file/d/1kjeVKEHi3rjsuNd-4428qTO28TicTd2H/view?usp=drive_link"
+                },
+                {
+                  "name":"Stress in Beams - 1801001",
+                  "link": "https://drive.google.com/file/d/1b_2acIkmccyeEUr3hny2GeQ7o430hsl2/view?usp=drive_link"
+                },
+                {
+                  "name": "Torsion & Spring - 1801001",
+                  "link":"https://drive.google.com/file/d/1PJKnj-qB5qXpTiLekW9gLaOwwt_Ht1Do/view?usp=drive_link"
+                }
+              ]
+            },
+            {
+              "title": "Engineering Materials",
+              "books": [
+                {
+                  "name": "Conrete - 1801001",
+                  "link": "https://drive.google.com/file/d/1ont2NkQmMpwawvovsgO4zb3tKO3AODeb/view?usp=sharing"
+                },
+                {
+                  "name": "Ferro Cement - 1801001",
+                  "link":"https://drive.google.com/file/d/1p7GZ68btg8NBZRKrIznmyL6dG9Zw1d2Z/view?usp=sharing"
+                },
+                {
+                  "name":"Materials All- 1801001",
+                  "link": "https://drive.google.com/file/d/1crMb2QxJa2Vb_lXJJQqDNPy7jndphMwl/view?usp=sharing"
+                },
+                {
+                  "name": "Materials All Math - 1801001",
+                  "link": "https://drive.google.com/file/d/1JdydWmY0xbmXawsaRnTBUDphducTwM0D/view?usp=sharing"
+                }
+              ]
+              
+            },
+            {
+              "title": "Math",
+              "books": [
+                {
+                  "name": "Laplace Transform -Part 1 - 1801001",
+                  "link": "https://drive.google.com/file/d/1sErqWTPns4anlR17emwFBiQA-Ljci2H-/view?usp=drive_link"
+                },
+                {
+                  "name": "Laplace Transform -Part 2 - 1801001",
+                  "link": "https://drive.google.com/file/d/1GRBhuTG_0zjAoe4AJHKnTy9Iv45laCGo/view?usp=drive_link"
+                },
+                {
+                  "name":"Differential Equation - 1910019",
+                  "link":"https://drive.google.com/file/d/13_vOXOVZIk52PcfC-MKM0pP7aBOBjWd5/view?usp=sharing"
+                },
+                {
+                  "name": "Partial Differential Equation - 1910019",
+                  "link":"https://drive.google.com/file/d/1vuf2CmqbY1A5xEzUlIlsVw03k_Farerx/view?usp=sharing"
+                },
+                {
+                  "name":"Series solution in DE - 1910019",
+                  "link":"https://drive.google.com/file/d/1ICnNjQoTw2zjEn7GSQ-Tbm-SR9P6JmAt/view?usp=sharing"
+                }
+              ]
+            },
+            {
+              "title": "Accounting",
+              "books": [
+                {
+                  "name": "Accounting All - 1801001",
+                  "link": "https://drive.google.com/file/d/1q2MJZyZbnYBhZIher37nM-j-y8v4t_Dy/view?usp=drive_link"
+                },
+                {
+                  "name":"Accounting All - 1910019",
+                  "link":"https://drive.google.com/file/d/1h5idglzWkomA0T78IGbqYN0yRjwcWSrC/view?usp=sharing"
+
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Term 2",
+          "subjects": [
+            {
+              "title": "Numerical - 1801001",
+              "books": [
+                {
+                  "name": "Numericals all",
+                  "link": "https://drive.google.com/file/d/14fGMSZtqtpZ5JZmKGq4mMDw_aYt6UPy7/view?usp=drive_link"
                 }
               ]
             }
