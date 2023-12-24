@@ -46,30 +46,30 @@ function App() {
       {authenticated ? ( // Only render the app content if authenticated
         <div>
       <div id="particle-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
+<div className="particle"></div>
       </div>
       <div className="background-image d-flex align-items-center justify-content-center min-vh-100">
         <Container>

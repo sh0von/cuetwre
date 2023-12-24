@@ -16,7 +16,10 @@ function PasswordForm({ onPasswordSubmit }) {
     const hashedPassword = md5(password);
     console.log("Entered Hash:", hashedPassword);
 
-    // Retrieve the password hash from environment variable
+    // Log the expected hash to check if it's read correctly
+    console.log("Expected Hash:", process.env.REACT_APP_PASSWORD_HASH);
+
+    // Retrieve the password hash from the environment variable
     const expectedHashedPassword = process.env.REACT_APP_PASSWORD_HASH;
 
     if (hashedPassword === expectedHashedPassword) {
