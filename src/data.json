@@ -7,63 +7,10 @@
           "name": "Term 1",
           "subjects": [
             {
-              "title": "Subject A",
-              "books": [
-                {
-                  "name": "Book 1A",
-                  "link": "https://drive.google.com/file/d/1ZWBk7LPc9ZMG_-Oh-2EssIs2hwGX26I9/view?usp=sharing"
-                },
-                {
-                  "name": "Book 2A",
-                  "link": "https://example.com/book-2a"
-                }
-              ]
             },
             {
-              "title": "Subject B",
-              "books": [
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                },
-                {
-                  "name": "Book 1B",
-                  "link": "https://example.com/book-1b"
-                }
-              ]
             },
             {
-              "title": "My test",
-              "books": [
-                {
-                  "name": "Hi",
-                  "link": "s"
-                }
-              ]
             }
           ]
         },
@@ -71,22 +18,8 @@
           "name": "Term 2",
           "subjects": [
             {
-              "title": "Subject C",
-              "books": [
-                {
-                  "name": "Book 1C",
-                  "link": "https://example.com/book-1c"
-                }
-              ]
             },
             {
-              "title": "dd",
-              "books": [
-                {
-                  "name": "e",
-                  "link": "ee"
-                }
-              ]
             }
           ]
         }
@@ -96,18 +29,6 @@
       "name": "Level 2",
       "terms": [
         {
-          "name": "Term 1",
-          "subjects": [
-            {
-              "title": "Subject D",
-              "books": [
-                {
-                  "name": "Book 1D",
-                  "link": "https://example.com/book-1d"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -118,13 +39,6 @@
           "name": "Term 1",
           "subjects": [
             {
-              "title": "Subject E",
-              "books": [
-                {
-                  "name": "Book 1E",
-                  "link": "https://example.com/book-1e"
-                }
-              ]
             }
           ]
         }
@@ -137,13 +51,6 @@
           "name": "Term 1",
           "subjects": [
             {
-              "title": "Subject F",
-              "books": [
-                {
-                  "name": "Book 1F",
-                  "link": "https://example.com/book-1f"
-                }
-              ]
             }
           ]
         }
